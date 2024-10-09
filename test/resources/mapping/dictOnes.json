@@ -1,0 +1,16 @@
+{
+    "policy_status": {
+        "issued": 8,
+        "cancelled": "Данные отстутствуют или договор помечен на удаление!"
+    },
+    "payment_form": {
+        "once": 0,
+        "installments": 1
+    },
+    "policy_type": {
+        "main": 0
+    },
+    "ins_type_id": {
+        "dsHealth": 39
+    }
+}

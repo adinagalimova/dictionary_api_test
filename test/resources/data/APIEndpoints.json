@@ -1,0 +1,36 @@
+{
+    "auth": {
+        "login": "api/login",
+        "testUsers": "api/auth/test-users"
+    },
+    "dictionary": {
+        "servers": "api/dictionary/settings/5",
+        "verifyBool": "api/dictionary/settings/verify_bool",
+        "testClients": "api/dictionary/test-clients",
+        "syncMarks": "api/dictionary/cars/sync-marks",
+        "syncModels": "api/dictionary/cars/sync-models",
+        "weekend": {
+            "getDay": "api/dictionary/weekend/get-day",
+            "getMonth": "api/dictionary/weekend/get-month",
+            "getYear": "api/dictionary/weekend/get-year",
+            "getPeriod": "api/dictionary/weekend/get-period",
+            "getWorkDay": "api/dictionary/weekend/get-work-day"
+        },
+        "getCurrency": "api/dictionary/get-currency/EUR",
+        "getPDF": "api/dictionary/get-pdf",
+        "getMKBInfo": "api/dictionary/get-mkb-info",
+        "getTables": "api/dictionary/get-tables",
+        "getTableFields": "api/dictionary/{modelName}/default-n-fields",
+        "templateBody": "api/dictionary/template-body/{productName}",
+        "template": "api/dictionary/template",
+        "getAll": "api/dictionary/{modelName}",
+        "getByFieldValue": "api/dictionary/{modelName}/{fieldName}/{fieldValue}",
+        "CRUD": {
+            "create": "api/dictionary/{modelName}",
+            "read": "api/dictionary/{modelName}/{id}",
+            "update": "api/dictionary/{modelName}/{id}",
+            "delete": "api/dictionary/{modelName}/{id}"
+        },
+        "getForQuery": "api/dictionary"
+    }
+}
