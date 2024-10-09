@@ -1,0 +1,48 @@
+{
+    "title": "get with query",
+    "type": "array",
+    "required": ["id", "country_id", "title", "title_en", "code", "alpha_code", 
+    "program_id", "currency_id", "multiply", "is_shengen", "is_excluded", "visa_required"],
+    "items": {
+        "type": "object"
+    },
+    "minItems": 1,
+    "properties": {
+        "id": {
+            "type": "number"
+        },
+        "country_id": {
+            "type": "number"
+        },
+        "title": {
+            "type": "string"
+        },
+        "title_en": {
+            "type": "string"
+        },
+        "code": {
+            "type": "string"
+        },
+        "alpha_code": {
+            "type": "string"
+        },
+        "program_id": {
+            "type": "number"
+        },
+        "currency_id": {
+            "type": "number"
+        },
+        "multiply": {
+            "type": "number"
+        },
+        "is_shengen": {
+            "type": "number"
+        },
+        "is_excluded": {
+            "type": "number"
+        },
+        "visa_required": {
+            "type": "number"
+        }
+    }
+}

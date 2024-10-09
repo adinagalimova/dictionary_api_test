@@ -1,0 +1,75 @@
+{
+    "setPolicy": {
+        "message": "Выписка по полису(-сам) успешно получена! ",
+        "data": {
+            "status": 8
+        }
+    },
+    "setPolicyTWB": {
+        "status": 1
+    },
+    "startSetPolicyWaiting": {
+        "status": 1,
+        "message": "Success"
+    },
+    "syncMarks": {
+        "success": true,
+        "message": "Cars marks updated successfully!"
+    },
+    "syncModels": {
+        "success": true,
+        "message": "Cars models updated successfully!"
+    },
+    "weekend": {
+        "getDay": {
+            "success": true,
+            "data": false,
+            "message": "Данные о дне получены успешно"
+        },
+        "getMonth": {
+            "success": true,
+            "message": "Данные за месяц получены успешно"
+        },
+        "getYear": {
+            "success": true,
+            "message": "Данные за год получены успешно"
+        },
+        "getPeriod": {
+            "success": true,
+            "message": "Данные за период получены успешно"
+        },
+        "getWorkDay": {
+            "success": true,
+            "message": "День для оплаты получен успешно"
+        },
+        "getPDF": {
+            "success": true
+        },
+        "getMKBInfo": {
+            "success": true,
+            "message": "Время ответа методов ЕСБД успешно получена!"
+        },
+        "templateBody": {
+            "success": true
+        },
+        "template": {
+            "success": true
+        },
+        "getTableFields": {
+            "success": true,
+            "message": "Success"
+        },
+        "create": {
+            "success": true,
+            "message": "Created successfully!"
+        },
+        "update": {
+            "success": true,
+            "message": "Updated successfully!"
+        },
+        "delete": {
+            "success": true,
+            "message": "Record ID:{id} deleted!"
+        }
+    }
+}

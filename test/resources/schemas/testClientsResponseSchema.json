@@ -1,0 +1,35 @@
+{ 
+    "title": "test client response schema",
+    "type": "array",
+    "required":["id", "login", "password", "partner", "online", "product", "created_at", "updated_at"],
+    "minItems": 1,
+    "items": {
+        "type": "object"
+    },
+    "properties": {
+        "id": {
+            "type": "number"
+        },
+        "login": {
+            "type": "string"
+        },
+        "password": {
+            "type": "string"
+        },
+        "partner": {
+            "type": "number"
+        },
+        "online":{
+            "type": "number"
+        },
+        "product": {
+            "type": "string"
+        },
+        "created_at": {
+            "type": null
+        },
+        "updated_at": {
+            "type": null
+        }
+    }
+}

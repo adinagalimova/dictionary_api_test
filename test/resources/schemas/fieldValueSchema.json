@@ -1,0 +1,41 @@
+{
+    "title": "field value schema",
+    "type": "object",
+    "required": ["id", "title", "code", "id_1c", "obligate", "complex", "not_quoted", 
+    "prolongation_type", "active", "created_at", "updated_at"],
+    "properties": {
+        "id": {
+            "type": "number"
+        },
+        "title": {
+            "type": "string"
+        },
+        "code": {
+            "type": "string"
+        },
+        "id_1c": {
+            "type": "number"
+        },
+        "obligate": {
+            "type": "number"
+        },
+        "complex": {
+            "type": "number"
+        },
+        "not_quoted": {
+            "type": "number"
+        },
+        "prolongation_type": {
+            "type": "number"
+        },
+        "active": {
+            "type": "number"
+        },
+        "created_at": {
+            "type": "string"
+        },
+        "updated_at": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{   
+    "date_begin": "date_begin",
+    "date_end": "date_end",
+    "country_list.0.country_code_alfa3": "trip_country_codes.0",
+    "country_list.1.country_code_alfa3": "trip_country_codes.1",
+    "ins_amount": "amount_sum",
+
+    "residence": "resident_bool",
+    "iin": "iin",
+    "first_name": "first_name",
+    "last_name": "last_name",
+    "middle_name": "middle_name",
+    "first_name_eng": "first_name_eng",
+    "last_name_eng": "last_name_eng",
+    "birth_date": "born",
+    "sex": "sex_id",
+    "doc_type": "document_type_id",
+    "doc_number": "document_number",
+    "doc_gived_at": "document_gived_date",
+    "doc_gived_by": "document_gived_by",
+    "address_street": "juridical_address",
+    "ipdl": "pdl",
+    "clients.0.email": "holders.0.email",
+    "clients.0.mobile_phone": "holders.0.phone",
+    "clients.1.email": "holders.1.email",
+    "clients.1.mobile_phone": "holders.1.phone"
+}

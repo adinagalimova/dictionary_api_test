@@ -1,0 +1,36 @@
+{
+    "timeIncrement": [2, "months"],
+    "datesFormat": "DD.MM.YYYY",
+    "amountSums": [10000, 30000, 50000, 100000],
+    "docNumberOnesRegexPattern": "\\B(?=(\\d{3})+(?!\\d))",
+    "testProduct": "ost/ost_contract",
+    "weekend": {
+        "getDay": "01.01.2024",
+        "getMonth": "01.2024",
+        "getYear": "2024",
+        "getPeriod": {
+            "from": "01.01.2024",
+            "to": "15.02.2024"
+        },
+        "getWorkDay": {
+            "start_date": "01.01.2024",
+            "work_day_num": "5"
+        }
+    },
+    "getCurrency": {
+        "date": "26.07.2024"
+    },
+    "testModel": "products",
+    "testFieldName": "id_1c",
+    "testFieldValue": "1",
+    "dataForCreate": {
+        "title": "test_product",
+        "code": "test_code",
+        "id_1c": 666
+    },
+    "dataForUpdate": {
+        "code": "update_test"
+    },
+    "childrenQuery": "/ar-territories?where[parent_id_esbd]=1&with[0]=children",
+    "query": "/countries?where[is_shengen]=0&where[country_id][operator]=<=&where[country_id][value]=20&where[program_id][operator]=NOT%20IN&where[program_id][value]=(1)&with[]=alpha_code&order[title]=ASC"
+}
