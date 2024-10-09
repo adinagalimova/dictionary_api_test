@@ -4,9 +4,7 @@ const onesDB = require('../tests/DB/onesDB');
 const authAPI = require('../tests/API/authAPI');
 const onesAPI = require('../tests/API/onesAPI');
 const ESBDAPI = require('../tests/API/ESBDAPI');
-const MSTAPI = require('../tests/API/MSTAPI');
 const dictionaryAPI = require('../tests/API/dictionaryAPI');
-// const notificationDB = require('../tests/DB/notificationDB');
 const Logger = require('./utils/log/logger');
 const JSONLoader = require('./utils/data/JSONLoader');
 
@@ -51,7 +49,7 @@ exports.mochaHooks = {
   },
   async afterAll() {
     await onesDB.closeConnection();
-    await notificationDB.closeConnection();
+    // await notificationDB.closeConnection();
 
     /* eslint no-unused-expressions: ["error", { "allowTernary": true }] */
     this.test.parent.suites

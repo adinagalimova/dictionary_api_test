@@ -2,7 +2,6 @@ const path = require('path');
 const authAPI = require('./authAPI');
 const BaseAPI = require('../../main/utils/API/baseAPI');
 const JSONLoader = require('../../main/utils/data/JSONLoader');
-const JSONMapper = require('../../main/utils/data/JSONMapper');
 require('dotenv').config({ path: path.join(__dirname, '../../../', '.env.test'), override: true });
 
 class DictionaryAPI extends BaseAPI {
@@ -88,7 +87,7 @@ class DictionaryAPI extends BaseAPI {
     return this.#API.get(JSONLoader.APIEndpoints.dictionary.weekend.getWorkDay, params);
   }
 
-  async getCurrency() { 
+  async getCurrency() {
     const params = {
       date: JSONLoader.testData.getCurrency,
     };
@@ -116,10 +115,10 @@ class DictionaryAPI extends BaseAPI {
     return this.#API.get(endpoint);
   }
 
-  async getTemplateBody() { 
+  async getTemplateBody() {
     const productName = JSONLoader.testData.testProduct;
     const endpoint = JSONLoader.APIEndpoints.dictionary.templateBody.toString()
-      .replace('{productName}', productName)
+      .replace('{productName}', productName);
 
     return this.#API.get(endpoint);
   }
@@ -144,9 +143,10 @@ class DictionaryAPI extends BaseAPI {
     return this.#API.get(endpoint);
   }
 
-  async create() { 
+  async create() {
     const modelName = JSONLoader.testData.testModel;
     const params = JSONLoader.testData.dataForCreate;
+    params.id_1c = Math.floor(Math.random() * 1000000);
     const endpoint = JSONLoader.APIEndpoints.dictionary.CRUD.create.toString()
       .replace('{modelName}', modelName);
 
@@ -188,7 +188,7 @@ class DictionaryAPI extends BaseAPI {
     return this.#API.get(endpoint);
   }
 
-  async getWithQuery() { 
+  async getWithQuery() {
     const endpoint = JSONLoader.APIEndpoints.dictionary.getForQuery
       + JSONLoader.testData.query;
 
