@@ -1,7 +1,6 @@
 {
     "auth": {
-        "login": "api/login",
-        "testUsers": "api/auth/test-users"
+        "login": "api/login"
     },
     "dictionary": {
         "servers": "api/dictionary/settings/5",

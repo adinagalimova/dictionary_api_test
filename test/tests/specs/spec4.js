@@ -18,12 +18,6 @@ describe('Dictionary API test suite:', async () => {
     response.data.should.be.jsonSchema(JSONLoader.fieldValueSchema);
   });
 
-  it('Test getByFieldValue:', async () => {
-    const response = await dictionaryAPI.getByFieldValue();
-    response.status.should.be.equal(200);
-    response.data.should.be.jsonSchema(JSONLoader.fieldValueSchema);
-  });
-
   it('Create method', async () => {
     const responseCreate = await dictionaryAPI.create();
     responseCreate.status.should.be.equal(200);
@@ -51,7 +45,7 @@ describe('Dictionary API test suite:', async () => {
     const responseCreate = await dictionaryAPI.create();
     responseCreate.status.should.be.equal(200);
     const createdId = responseCreate.data.data.id;
-    const responseDelete = await dictionaryAPI.deleteProduct(createdId);
+    const responseDelete = await dictionaryAPI.delete(createdId);
     responseDelete.status.should.be.equal(200);
     responseDelete.data.should.be.jsonSchema(JSONLoader.templateResponse.weekend.delete);
   });

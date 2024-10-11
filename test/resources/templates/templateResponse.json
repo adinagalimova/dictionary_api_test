@@ -1,17 +1,4 @@
 {
-    "setPolicy": {
-        "message": "Выписка по полису(-сам) успешно получена! ",
-        "data": {
-            "status": 8
-        }
-    },
-    "setPolicyTWB": {
-        "status": 1
-    },
-    "startSetPolicyWaiting": {
-        "status": 1,
-        "message": "Success"
-    },
     "syncMarks": {
         "success": true,
         "message": "Cars marks updated successfully!"

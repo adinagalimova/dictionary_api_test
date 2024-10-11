@@ -1,8 +1,5 @@
 {
-    "timeIncrement": [2, "months"],
     "datesFormat": "DD.MM.YYYY",
-    "amountSums": [10000, 30000, 50000, 100000],
-    "docNumberOnesRegexPattern": "\\B(?=(\\d{3})+(?!\\d))",
     "testProduct": "ost/ost_contract",
     "weekend": {
         "getDay": "01.01.2024",

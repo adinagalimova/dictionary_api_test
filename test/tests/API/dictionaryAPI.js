@@ -172,7 +172,7 @@ class DictionaryAPI extends BaseAPI {
     return this.#API.put(endpoint, params);
   }
 
-  async deleteProduct(id) { //
+  async delete(id) { //
     const modelName = JSONLoader.testData.testModel;
     const endpoint = JSONLoader.APIEndpoints.dictionary.CRUD.delete.toString()
       .replace('{modelName}', modelName)
