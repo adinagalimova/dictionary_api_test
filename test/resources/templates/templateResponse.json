@@ -10,7 +10,7 @@
     "weekend": {
         "getDay": {
             "success": true,
-            "data": false,
+            "data": true,
             "message": "Данные о дне получены успешно"
         },
         "getMonth": {
