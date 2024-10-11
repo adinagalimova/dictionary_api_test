@@ -1,9 +1,6 @@
 const moment = require('moment-timezone');
 const allureCommandline = require('allure-commandline');
-const onesDB = require('../tests/DB/onesDB');
 const authAPI = require('../tests/API/authAPI');
-const onesAPI = require('../tests/API/onesAPI');
-const ESBDAPI = require('../tests/API/ESBDAPI');
 const dictionaryAPI = require('../tests/API/dictionaryAPI');
 const Logger = require('./utils/log/logger');
 const JSONLoader = require('./utils/data/JSONLoader');
@@ -37,20 +34,12 @@ exports.mochaHooks = {
       Logger.log(`${title} test log:`, title);
     }
 
-    await onesDB.createConnection();
-    // await notificationDB.createConnection();
     await authAPI.setToken();
-    await onesAPI.setToken();
-    await ESBDAPI.setToken();
     await dictionaryAPI.setToken();
-    // await MSTAPI.setToken();
     await dictionaryAPI.toggleServer();
     await dictionaryAPI.toggleVerification();
   },
   async afterAll() {
-    await onesDB.closeConnection();
-    // await notificationDB.closeConnection();
-
     /* eslint no-unused-expressions: ["error", { "allowTernary": true }] */
     this.test.parent.suites
       .some((suite) => suite.tests.some((test) => test.state === 'failed'))
