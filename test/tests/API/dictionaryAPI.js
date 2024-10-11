@@ -143,7 +143,7 @@ class DictionaryAPI extends BaseAPI {
     return this.#API.get(endpoint);
   }
 
-  async create() {
+  async createProduct() {
     const modelName = JSONLoader.testData.testModel;
     const params = JSONLoader.testData.dataForCreate;
     params.id_1c = Math.floor(Math.random() * 1000000);
@@ -153,7 +153,7 @@ class DictionaryAPI extends BaseAPI {
     return this.#API.post(endpoint, params);
   }
 
-  async read(id) {
+  async readProduct(id) {
     const modelName = JSONLoader.testData.testModel;
     const endpoint = JSONLoader.APIEndpoints.dictionary.CRUD.read.toString()
       .replace('{modelName}', modelName)
@@ -162,7 +162,7 @@ class DictionaryAPI extends BaseAPI {
     return this.#API.get(endpoint);
   }
 
-  async update(id) {
+  async updateProduct(id) {
     const modelName = JSONLoader.testData.testModel;
     const params = JSONLoader.testData.dataForUpdate;
     const endpoint = JSONLoader.APIEndpoints.dictionary.CRUD.update.toString()
@@ -172,7 +172,7 @@ class DictionaryAPI extends BaseAPI {
     return this.#API.put(endpoint, params);
   }
 
-  async delete(id) { //
+  async deleteProduct(id) { //
     const modelName = JSONLoader.testData.testModel;
     const endpoint = JSONLoader.APIEndpoints.dictionary.CRUD.delete.toString()
       .replace('{modelName}', modelName)

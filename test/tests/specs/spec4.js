@@ -19,33 +19,33 @@ describe('Dictionary API test suite:', async () => {
   });
 
   it('Create method', async () => {
-    const responseCreate = await dictionaryAPI.create();
+    const responseCreate = await dictionaryAPI.createProduct();
     responseCreate.status.should.be.equal(200);
     responseCreate.data.should.be.jsonSchema(JSONLoader.templateResponse.weekend.create);
   });
 
   it('Read method', async () => {
-    const responseCreate = await dictionaryAPI.create();
+    const responseCreate = await dictionaryAPI.createProduct();
     responseCreate.status.should.be.equal(200);
     const createdId = responseCreate.data.data.id;
-    const responseRead = await dictionaryAPI.read(createdId);
+    const responseRead = await dictionaryAPI.readProduct(createdId);
     responseRead.status.should.be.equal(200);
   });
 
   it('Update method', async () => {
-    const responseCreate = await dictionaryAPI.create();
+    const responseCreate = await dictionaryAPI.createProduct();
     responseCreate.status.should.be.equal(200);
     const createdId = responseCreate.data.data.id;
-    const responseUpdate = await dictionaryAPI.update(createdId);
+    const responseUpdate = await dictionaryAPI.updateProduct(createdId);
     responseUpdate.status.should.be.equal(200);
     responseUpdate.data.should.be.jsonSchema(JSONLoader.templateResponse.weekend.update);
   });
 
   it('Delete method', async () => {
-    const responseCreate = await dictionaryAPI.create();
+    const responseCreate = await dictionaryAPI.createProduct();
     responseCreate.status.should.be.equal(200);
     const createdId = responseCreate.data.data.id;
-    const responseDelete = await dictionaryAPI.delete(createdId);
+    const responseDelete = await dictionaryAPI.deleteProduct(createdId);
     responseDelete.status.should.be.equal(200);
     responseDelete.data.should.be.jsonSchema(JSONLoader.templateResponse.weekend.delete);
   });
@@ -58,6 +58,7 @@ describe('Dictionary API test suite:', async () => {
   it('Test getWithQuery:', async () => {
     const response = await dictionaryAPI.getWithQuery();
     response.status.should.be.equal(200);
+    response.data.should.be.jsonSchema(JSONLoader.queryResponseSchema);
   });
 
   afterEach(function () { // eslint-disable-line func-names
