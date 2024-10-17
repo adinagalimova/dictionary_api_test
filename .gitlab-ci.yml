@@ -1,10 +1,14 @@
 stages:
+  - unit-tests
+  - check
+  - build
+  - deploy
   - generate-config
   - e2e-tests
   - create-merge-request
 include:
   - project: 'amanatpolicy/devops/test'
-    file: 'vms-unit-test.yml'
+    file: 'dictionary-unit-test.yml'
   - project: 'amanatpolicy/devops/test'
     file: 'check.yml'
   - project: 'amanatpolicy/devops/test'
