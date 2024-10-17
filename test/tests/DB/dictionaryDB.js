@@ -14,7 +14,13 @@ class DictionaryDB extends BaseDB {
   }
 
   async deleteTestData() {
-    await this.sqlQuery("DELETE FROM products WHERE title = 'test_product';");
+    const target = 'test_product';
+    await this.sqlDelete(
+      target,
+      'products',
+      'WHERE `title` = ?',
+      [target],
+    );
   }
 }
 

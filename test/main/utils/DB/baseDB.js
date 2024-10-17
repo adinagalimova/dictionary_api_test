@@ -54,6 +54,18 @@ class BaseDB {
     const query = `SELECT ${target} FROM ${tableName} ${conditions};`;
     return this.sqlQuery(query, values);
   }
+
+  async sqlDelete(
+    target,
+    tableName,
+    conditions,
+    values = [],
+    options = { hasLogger: true },
+  ) {
+    if (options.hasLogger) Logger.log(`[inf] ▶ delete from ${tableName} table where ${target}`);
+    const query = `DELETE FROM ${tableName} ${conditions};`;
+    return this.sqlQuery(query, values);
+  }
 }
 
 module.exports = BaseDB;
