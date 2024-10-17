@@ -12,6 +12,10 @@ class DictionaryDB extends BaseDB {
       process.env.DB_PORT,
     );
   }
+
+  async deleteTestData() {
+    await this.sqlQuery("DELETE FROM products WHERE title = 'test_product';");
+  }
 }
 
 module.exports = new DictionaryDB();

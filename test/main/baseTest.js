@@ -2,7 +2,7 @@ const moment = require('moment-timezone');
 const allureCommandline = require('allure-commandline');
 const authAPI = require('../tests/API/authAPI');
 const dictionaryAPI = require('../tests/API/dictionaryAPI');
-const dictionaryDB = require('../tests/DB/dictionaryDB')
+const dictionaryDB = require('../tests/DB/dictionaryDB');
 const Logger = require('./utils/log/logger');
 const JSONLoader = require('./utils/data/JSONLoader');
 
@@ -41,8 +41,8 @@ exports.mochaHooks = {
     await dictionaryAPI.toggleVerification();
   },
   async afterAll() {
-      await dictionaryDB.sqlQuery("DELETE FROM products WHERE title = 'test_product';");
-      await dictionaryDB.closeConnection();
+    await dictionaryDB.deleteTestData();
+    await dictionaryDB.closeConnection();
 
     /* eslint no-unused-expressions: ["error", { "allowTernary": true }] */
     this.test.parent.suites
