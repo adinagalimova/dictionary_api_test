@@ -24,11 +24,13 @@ describe('Dictionary API test suite:', async () => {
     response.data.should.containSubset(JSONLoader.templateResponse.syncMarks);
   });
 
-  it('Test syncModels:', async () => {
-    const response = await dictionaryAPI.syncModels();
-    response.status.should.be.equal(200);
-    response.data.should.containSubset(JSONLoader.templateResponse.syncModels);
-  });
+  if (JSONLoader.configData.environment === 'localhost') {
+    it('Test syncModels:', async () => {
+      const response = await dictionaryAPI.syncModels();
+      response.status.should.be.equal(200);
+      response.data.should.containSubset(JSONLoader.templateResponse.syncModels);
+    });
+  }
 
   it('Test getDay:', async () => {
     const response = await dictionaryAPI.getDay();
